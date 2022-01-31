@@ -14,6 +14,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ExcelUtils extends BaseClass {
 
@@ -23,12 +25,14 @@ public class ExcelUtils extends BaseClass {
 	static Workbook book;
 	static Sheet sheet;
 	static JavascriptExecutor js;
+	
+	private static Logger logger = LoggerFactory.getLogger(BaseClass.class);
 
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);
-			System.out.println(TESTDATA_SHEET_PATH);
+			logger.info(TESTDATA_SHEET_PATH);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

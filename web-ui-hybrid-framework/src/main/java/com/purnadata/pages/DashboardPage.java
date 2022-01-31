@@ -23,4 +23,12 @@ public class DashboardPage {
 	@FindBy(name="btn_new_party")
 	public WebElement btn_newSaleInvoice;
 	
+	@FindBy(xpath="//i[@class='menu-icon fa fa-desktop']")
+	public
+	WebElement link_main;
+	
+	@FindBy(xpath="//a[@href='supplier_dashboard.php']")
+	public
+	WebElement link_supplier;
+	
 }

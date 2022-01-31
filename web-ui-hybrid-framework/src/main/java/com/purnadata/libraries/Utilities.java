@@ -1,3 +1,4 @@
+
 package com.purnadata.libraries;
 
 import java.time.Duration;
@@ -16,8 +17,12 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Utilities {
+	
+	private static Logger logger = LoggerFactory.getLogger(Utilities.class);
 
 	public void syncElement(WebDriver driver, WebElement element, String conditionForWait) {
 		try {
@@ -33,15 +38,15 @@ public class Utilities {
 			case "ToInvisible":
 				new WebDriverWait(driver, 15).until(ExpectedConditions.invisibilityOf(element));
 				break;
-				
+
 			case "alertPresent":
 				new WebDriverWait(driver, 15).until(ExpectedConditions.alertIsPresent());
 
 			default:
-				throw new PurnaException("Invalid Condition " + conditionForWait);
+				throw new Exception("Invalid Condition " + conditionForWait);
 			}
 		} catch (Exception e) {
-			throw new PurnaException("Could Not Sync WebElement " + e.getMessage());			
+			e.printStackTrace();
 		}
 	}
 
@@ -57,25 +62,25 @@ public class Utilities {
 				break;
 
 			default:
-				throw new PurnaException("Invalid Condition " + conditionForWait);
+				throw new Exception("Invalid Condition " + conditionForWait);
 			}
 		} catch (Exception e) {
-			throw new PurnaException("Could Not Sync WebElement " + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
 	public void clickElement(WebDriver driver, WebElement element) {
-		syncElement(driver, element, "ToVisible");
+		syncElement(driver, element, "ToClickable");
 
 		try {
 			if (!element.isDisplayed()) {
 				scrollToWebElement(driver, element);
 			}
-			element.click();
-			// ((JavascriptExecutor)driver).executeScript("argument[0].click();",
-			// element);
+			element.click(); 
+//			((JavascriptExecutor) driver).executeScript("argument[0].click();", //
+//					element);
 		} catch (Exception e) {
-			throw new PurnaException("Could Not Click WebElement " + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -83,7 +88,7 @@ public class Utilities {
 		try {
 			((JavascriptExecutor) driver).executeScript("argument[0].scrollIntoView(true);", element);
 		} catch (Exception e) {
-			throw new PurnaException("Could Not Scroll WebElement " + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -92,7 +97,7 @@ public class Utilities {
 		try {
 			((JavascriptExecutor) driver).executeScript("argument[0].click();", element);
 		} catch (Exception e) {
-			throw new PurnaException("Clicking WebElement By JavaScriptExecutor Failed " + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -100,7 +105,7 @@ public class Utilities {
 		try {
 			new Actions(driver).moveToElement(element);
 		} catch (Exception e) {
-			throw new PurnaException("Move MouseOver Action WebElement Failed " + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -108,7 +113,7 @@ public class Utilities {
 		try {
 			new Actions(driver).sendKeys(element, stringToInput);
 		} catch (Exception e) {
-			throw new PurnaException("SendKeys Thru Action Failed " + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -124,7 +129,7 @@ public class Utilities {
 				}
 			}
 		} catch (Exception e) {
-			throw new PurnaException("Clicking WebElement From List Failed " + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -132,14 +137,14 @@ public class Utilities {
 		try {
 			Thread.sleep(milliSeconds);
 		} catch (InterruptedException e) {
-			throw new PurnaException("Explicit Sleep Failed " + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
 	public String getRandomString(int stringLength, String dataType) {
 
 		StringBuilder builder = new StringBuilder();
-		String stringType;
+		String stringType = null;
 
 		switch (dataType) {
 		case "Numbers":
@@ -155,7 +160,7 @@ public class Utilities {
 			break;
 
 		default:
-			throw new PurnaException("Invalid Datatype For Random String ");
+			logger.info("Invalid input");
 		}
 		try {
 			while (stringLength != 0) {
@@ -163,25 +168,23 @@ public class Utilities {
 				builder.append(stringType.charAt(characterIndex));
 			}
 		} catch (Exception e) {
-			throw new PurnaException("Random String Generation Failed " + e.getMessage());
+			e.printStackTrace();
 		}
 
 		return builder.toString();
 	}
-	
+
 	public WebElement waitForElementWithFluentWait(WebDriver driver, WebElement element, int timeOut, int pollingTime) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-					.withTimeout(Duration.ofSeconds(timeOut))
-					.pollingEvery(Duration.ofSeconds(pollingTime))
-					.ignoring(NoSuchElementException.class);
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
+				.pollingEvery(Duration.ofSeconds(pollingTime)).ignoring(NoSuchElementException.class);
 
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
-	// *******************Drop down utils ***************
-	public void doDropDownSelectByVisibleText(WebElement element, String value) {
-		Select select = new Select(element);
-		select.selectByVisibleText(value);
+	// *******************Drop down utils *************** public void
+	public void doDropDownSelectByVisibleText(WebElement element, String value) { 
+		Select select = new Select(element); 
+		select.selectByVisibleText(value); 
 	}
 
 	public void doDropDownSelectByValue(WebElement element, String value) {
@@ -235,7 +238,7 @@ public class Utilities {
 			}
 		}
 	}
-	
+
 	public Alert handleAlert(WebDriver driver) {
 		Alert alert = driver.switchTo().alert();
 		return alert;
