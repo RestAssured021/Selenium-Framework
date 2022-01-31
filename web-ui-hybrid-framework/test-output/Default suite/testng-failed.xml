@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.magento.testcases.LoginPageTest">
+      <class name="com.purnadata.testcases.InventoryTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="loginFailureTest"/>
-          <include name="loginSuccessTest"/>
+          <include name="browserclose"/>
+          <include name="addInventorySuccessTest"/>
+          <include name="inti"/>
         </methods>
-      </class> <!-- com.magento.testcases.LoginPageTest -->
+      </class> <!-- com.purnadata.testcases.InventoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
