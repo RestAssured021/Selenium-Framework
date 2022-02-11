@@ -40,10 +40,12 @@ public class BaseClass {
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ prop.getProperty("chromedriver.path"));			
 			driver = new ChromeDriver(); 
+			logger.info("Launching chrome browser");
 		}
 		else if(browserName.equals("FF")){
 			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ prop.getProperty("iedriver.path"));				
 			driver = new InternetExplorerDriver(); 
+			logger.info("Launching IE browser");
 		}
 		
 		driver.manage().window().maximize();
