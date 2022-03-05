@@ -1,6 +1,5 @@
 package com.purnadata.testcases;
 
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -30,7 +29,7 @@ public class InventoryTest extends BaseClass{
 		purchaseItemDashPage = new PurchaseItemDashboardPage(driver);
 		purchaseItemPage = new PurchaseItemPage(driver);
 		utils = new Utilities();
-		loginPage.logintToPurna("admin", "admin");
+		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	@DataProvider

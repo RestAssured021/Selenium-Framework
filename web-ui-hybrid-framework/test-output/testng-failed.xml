@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.purnadata.testcases.InventoryTest">
+      <class name="com.purnadata.testcases.SupplierTest">
         <methods>
-          <include name="browserclose"/>
-          <include name="addInventorySuccessTest"/>
-          <include name="inti"/>
+          <include name="createNewSupplierSuccessTest"/>
+          <include name="closeBrowser"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- com.purnadata.testcases.InventoryTest -->
+      </class> <!-- com.purnadata.testcases.SupplierTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
