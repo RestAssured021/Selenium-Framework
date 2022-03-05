@@ -31,4 +31,7 @@ public class DashboardPage {
 	public
 	WebElement link_supplier;
 	
+	@FindBy(xpath = "//a[contains(@href,'employee_dashboard')]")
+	public WebElement link_employee;
+	
 }

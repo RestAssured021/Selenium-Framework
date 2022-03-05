@@ -1,57 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-30T09:05:34 IST" name="Default suite" finished-at="2022-01-30T09:05:44 IST" duration-ms="10337">
+  <suite started-at="2022-03-05T20:01:14 IST" name="Default suite" finished-at="2022-03-05T20:02:17 IST" duration-ms="63330">
     <groups>
     </groups>
-    <test started-at="2022-01-30T09:05:34 IST" name="Default test" finished-at="2022-01-30T09:05:44 IST" duration-ms="10337">
-      <class name="com.purnadata.testcases.InventoryTest">
-        <test-method is-config="true" signature="inti()[pri:0, instance:com.purnadata.testcases.InventoryTest@5e2c3d18]" started-at="2022-01-30T09:05:35 IST" name="inti" finished-at="2022-01-30T09:05:40 IST" duration-ms="5436" status="PASS">
+    <test started-at="2022-03-05T20:01:14 IST" name="Default test" finished-at="2022-03-05T20:02:17 IST" duration-ms="63330">
+      <class name="com.purnadata.testcases.EmployeeTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:01:15 IST" name="init" finished-at="2022-03-05T20:01:26 IST" duration-ms="10424" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- inti -->
-        <test-method signature="addInventorySuccessTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purnadata.testcases.InventoryTest@5e2c3d18]" started-at="2022-01-30T09:05:40 IST" name="addInventorySuccessTest" data-provider="getInventoryData" finished-at="2022-01-30T09:05:44 IST" duration-ms="3643" status="PASS">
+        </test-method> <!-- init -->
+        <test-method signature="addNewEmployeeSuccessTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:01:26 IST" name="addNewEmployeeSuccessTest" data-provider="getEmployeeData" finished-at="2022-03-05T20:01:31 IST" duration-ms="5538" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[1003.0]]>
+                <![CDATA[2001.0]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[grocery12]]>
+                <![CDATA[Virat Kohli]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Grossery]]>
+                <![CDATA[Sports]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[2500.0]]>
+                <![CDATA[1011970.0]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[2.0]]>
+                <![CDATA[Captain]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[5000.0]]>
+                <![CDATA[100P]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[12345.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ASDF123]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1.23456765E8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addInventorySuccessTest -->
-        <test-method is-config="true" signature="browserclose()[pri:0, instance:com.purnadata.testcases.InventoryTest@5e2c3d18]" started-at="2022-01-30T09:05:44 IST" name="browserclose" finished-at="2022-01-30T09:05:44 IST" duration-ms="383" status="PASS">
+        </test-method> <!-- addNewEmployeeSuccessTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:01:31 IST" name="closeBrowser" finished-at="2022-03-05T20:01:32 IST" duration-ms="604" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserclose -->
-      </class> <!-- com.purnadata.testcases.InventoryTest -->
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:01:32 IST" name="init" finished-at="2022-03-05T20:01:41 IST" duration-ms="8887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="addNewEmployeeSuccessTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:01:41 IST" name="addNewEmployeeSuccessTest" data-provider="getEmployeeData" finished-at="2022-03-05T20:01:46 IST" duration-ms="5466" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2002.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Virat Kohli]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sports]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1011970.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Captain]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[100P]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[12345.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ASDF123]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1.23456765E8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewEmployeeSuccessTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:01:46 IST" name="closeBrowser" finished-at="2022-03-05T20:01:47 IST" duration-ms="510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:01:47 IST" name="init" finished-at="2022-03-05T20:01:56 IST" duration-ms="9113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="addNewEmployeeSuccessTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:01:56 IST" name="addNewEmployeeSuccessTest" data-provider="getEmployeeData" finished-at="2022-03-05T20:02:02 IST" duration-ms="5871" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2003.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Virat Kohli]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sports]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1011970.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Captain]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[100P]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[12345.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ASDF123]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1.23456765E8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewEmployeeSuccessTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:02:02 IST" name="closeBrowser" finished-at="2022-03-05T20:02:02 IST" duration-ms="472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:02:02 IST" name="init" finished-at="2022-03-05T20:02:11 IST" duration-ms="9371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="addNewEmployeeSuccessTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:02:11 IST" name="addNewEmployeeSuccessTest" data-provider="getEmployeeData" finished-at="2022-03-05T20:02:17 IST" duration-ms="5639" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2004.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Virat Kohli]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sports]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1011970.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Captain]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[100P]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[12345.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ASDF123]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1.23456765E8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewEmployeeSuccessTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.purnadata.testcases.EmployeeTest@7a35b0f5]" started-at="2022-03-05T20:02:17 IST" name="closeBrowser" finished-at="2022-03-05T20:02:17 IST" duration-ms="444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.purnadata.testcases.EmployeeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

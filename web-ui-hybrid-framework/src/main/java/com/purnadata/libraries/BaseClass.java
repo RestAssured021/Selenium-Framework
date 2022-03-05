@@ -42,7 +42,7 @@ public class BaseClass {
 			driver = new ChromeDriver(); 
 			logger.info("Launching chrome browser");
 		}
-		else if(browserName.equals("FF")){
+		else if(browserName.equals("IE")){
 			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+ prop.getProperty("iedriver.path"));				
 			driver = new InternetExplorerDriver(); 
 			logger.info("Launching IE browser");

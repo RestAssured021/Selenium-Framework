@@ -32,14 +32,14 @@ public class LoginTest extends BaseClass {
 	@Test (priority=0)
 	public void loginSuccessTest() {
 		
-		loginPage.logintToPurna(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertEquals(dashboardPage.text_salesInvoiceDetails.getText(), "Sale Invoice Details");
 
 	}
 
 	@Test (priority=1)
 	public void loginFailureTest() {
-		loginPage.logintToPurna(prop.getProperty("username"), prop.getProperty("password2"));
+		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password2"));
 		Assert.assertEquals(dashboardPage.text_salesInvoiceDetails.getText(), "Sale Invoice Details");
 	}
 

@@ -27,7 +27,7 @@ public class SalesInvoiceTest extends BaseClass {
 		dashboardPage = new DashboardPage(driver);
 		saleInvoicePage = new SaleInvoicePage(driver);
 		utils = new Utilities();
-		loginPage.logintToPurna(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	@Test

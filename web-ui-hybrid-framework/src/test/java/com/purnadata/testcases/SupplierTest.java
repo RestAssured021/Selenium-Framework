@@ -34,7 +34,7 @@ public class SupplierTest extends BaseClass {
 		supplierPage = new SupplierPage(driver);
 		utils = new Utilities();
 
-		loginPage.logintToPurna(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
 	@Test
@@ -43,7 +43,10 @@ public class SupplierTest extends BaseClass {
 		dashboardPage.link_supplier.click();
 		
 		utils.syncElement(driver, suppDashboardPage.btn_newSupplier, "ToClickable");
+		suppDashboardPage.btn_newSupplier.click();
 
+		utils.syncElement(driver, supplierPage.txtBox_srNo, "ToVisible");
+		
 		supplierPage.txtBox_srNo.clear();
 		supplierPage.txtBox_srNo.sendKeys("200103");
 		supplierPage.txtBox_supplierName.sendKeys("TestSupplier3");

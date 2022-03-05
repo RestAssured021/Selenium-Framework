@@ -20,7 +20,7 @@ public class LoginPage {
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement btn_login;	
 	
-	public void logintToPurna(String username, String password) {
+	public void loginToPurna(String username, String password) {
 		textBox_username.sendKeys(username);
 		textBox_password.sendKeys(password);
 		btn_login.click();
