@@ -34,4 +34,10 @@ public class DashboardPage {
 	@FindBy(xpath = "//a[contains(@href,'employee_dashboard')]")
 	public WebElement link_employee;
 	
+	@FindBy(xpath="(//span[@class='menu-text'])[4]")
+	public WebElement link_purchase;
+	
+	@FindBy(xpath="//a[@href='view_supplier_balance.php']")
+	public WebElement link_paymentSummary;
+	
 }

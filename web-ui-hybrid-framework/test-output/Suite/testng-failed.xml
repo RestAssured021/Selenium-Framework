@@ -6,6 +6,20 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.purnadata.testcases.EmployeeTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="init"/>
+          <include name="addNewEmployeeSuccessTest" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- com.purnadata.testcases.EmployeeTest -->
+      <class name="com.purnadata.testcases.PaymentSummaryTest">
+        <methods>
+          <include name="verifyPurchaseInvoiceExportTest"/>
+          <include name="init"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.purnadata.testcases.PaymentSummaryTest -->
       <class name="com.purnadata.testcases.LoginTest">
         <methods>
           <include name="close"/>
