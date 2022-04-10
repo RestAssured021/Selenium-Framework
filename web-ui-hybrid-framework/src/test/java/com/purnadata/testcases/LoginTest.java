@@ -29,7 +29,7 @@ public class LoginTest extends BaseClass {
 	}
 
 	
-	@Test (priority=0)
+	@Test
 	public void loginSuccessTest() {
 		
 		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password"));
@@ -37,12 +37,18 @@ public class LoginTest extends BaseClass {
 
 	}
 
-	@Test (priority=1)
+	@Test
 	public void loginFailureTest() {
 		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password2"));
 		Assert.assertEquals(dashboardPage.text_salesInvoiceDetails.getText(), "Sale Invoice Details");
 	}
 
+	@Test
+	public void titleCheck() {
+		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password2"));
+		Assert.assertEquals(driver.getTitle(), "Sales Dashboard");
+	}
+	
 	@AfterMethod
 	public void close() {
 		driver.close();
