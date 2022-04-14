@@ -30,7 +30,7 @@
       <class name="com.purnadata.testcases.SalesInvoiceTest">
         <methods>
           <include name="init"/>
-          <include name="createNewSalesInvoiceSuccessTest"/>
+          <include name="addNewSaleInvoiceTest" invocation-numbers="1"/>
           <include name="close"/>
         </methods>
       </class> <!-- com.purnadata.testcases.SalesInvoiceTest -->
