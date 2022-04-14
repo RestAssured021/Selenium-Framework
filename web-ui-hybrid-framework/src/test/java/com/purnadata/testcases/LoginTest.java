@@ -1,5 +1,6 @@
 package com.purnadata.testcases;
 
+import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -21,8 +22,8 @@ public class LoginTest extends BaseClass {
 	private static Logger logger = LoggerFactory.getLogger(LoginTest.class);
 
 	@BeforeMethod
-	public void init(ITestResult result) {
-		logger.info(result.getMethod().getMethodName() + " started");
+	public void init() {
+		
 		initialization();
 		loginPage = new LoginPage(driver);
 		dashboardPage = new DashboardPage(driver);
@@ -41,12 +42,15 @@ public class LoginTest extends BaseClass {
 	public void loginFailureTest() {
 		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password2"));
 		Assert.assertEquals(dashboardPage.text_salesInvoiceDetails.getText(), "Sale Invoice Details");
+	
 	}
 
 	@Test
 	public void titleCheck() {
-		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password2"));
-		Assert.assertEquals(driver.getTitle(), "Sales Dashboard");
+		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password"));
+//		Assert.assertEquals(driver.getTitle(), "Sales Dashboard");
+		
+		Assert.assertEquals(driver.findElements(By.xpath("//*[text()='nitinnitin']")).size(), 0);
 	}
 	
 	@AfterMethod

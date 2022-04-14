@@ -243,4 +243,14 @@ public class Utilities {
 		Alert alert = driver.switchTo().alert();
 		return alert;
 	}
+	
+	public void selectDropDownByVisibleText(WebElement element, String text) {
+		Select select = new Select(element);
+		select.selectByVisibleText(text);
+	}
+	
+	public void acceptAlert(WebDriver driver) {
+		syncElement(driver, null, "AlertTobePresent");
+		driver.switchTo().alert().accept();
+	}
 }
