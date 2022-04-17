@@ -18,7 +18,11 @@ public class LoginPage {
 	WebElement textBox_password;
 	
 	@FindBy(xpath="//button[@type='submit']")
-	WebElement btn_login;	
+	WebElement btn_login;
+	
+	@FindBy(xpath="//h3[text()='Admin login']")
+	public WebElement label_logoDesc;
+	
 	
 	public void loginToPurna(String username, String password) {
 		textBox_username.sendKeys(username);
