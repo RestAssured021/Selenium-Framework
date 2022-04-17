@@ -48,9 +48,7 @@ public class LoginTest extends BaseClass {
 	@Test
 	public void titleCheck() {
 		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password"));
-//		Assert.assertEquals(driver.getTitle(), "Sales Dashboard");
-		
-		Assert.assertEquals(driver.findElements(By.xpath("//*[text()='nitinnitin']")).size(), 0);
+		Assert.assertEquals(driver.getTitle(), "Sales Dashboard");
 	}
 	
 	@Test
