@@ -53,6 +53,11 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(driver.findElements(By.xpath("//*[text()='nitinnitin']")).size(), 0);
 	}
 	
+	@Test
+	public void checkLogoDescription() {
+		Assert.assertEquals(loginPage.label_logoDesc.getText(), "Admin login");
+	}
+	
 	@AfterMethod
 	public void close() {
 		driver.close();
