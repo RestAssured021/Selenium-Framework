@@ -1,38 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="5" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-14T21:19:00 IST" name="Default suite" finished-at="2022-04-14T21:19:27 IST" duration-ms="26498">
+  <suite started-at="2022-05-19T20:27:44 IST" name="Suite" finished-at="2022-05-19T20:30:15 IST" duration-ms="150880">
     <groups>
     </groups>
-    <test started-at="2022-04-14T21:19:00 IST" name="Default test" finished-at="2022-04-14T21:19:27 IST" duration-ms="26498">
-      <class name="com.purnadata.testcases.LoginTest">
-        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.LoginTest@8519cb4]" started-at="2022-04-14T21:19:00 IST" name="init" finished-at="2022-04-14T21:19:06 IST" duration-ms="5429" status="PASS">
+    <test started-at="2022-05-19T20:27:44 IST" name="Test" finished-at="2022-05-19T20:30:15 IST" duration-ms="150880">
+      <class name="com.purnadata.testcases.SalesInvoiceTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.SalesInvoiceTest@a307a8c]" started-at="2022-05-19T20:28:56 IST" name="init" finished-at="2022-05-19T20:29:07 IST" duration-ms="11465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginFailureTest()[pri:0, instance:com.purnadata.testcases.LoginTest@8519cb4]" started-at="2022-04-14T21:19:06 IST" name="loginFailureTest" finished-at="2022-04-14T21:19:27 IST" duration-ms="20794" status="FAIL">
+        <test-method signature="addNewSaleInvoiceTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purnadata.testcases.SalesInvoiceTest@a307a8c]" started-at="2022-05-19T20:29:07 IST" name="addNewSaleInvoiceTest" data-provider="getSalesInvoicedata" finished-at="2022-05-19T20:29:11 IST" duration-ms="4257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1234asdf]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[26/03/2022]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Shree New Customer]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2500.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[100.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[120.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewSaleInvoiceTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.purnadata.testcases.SalesInvoiceTest@a307a8c]" started-at="2022-05-19T20:29:11 IST" name="close" finished-at="2022-05-19T20:29:12 IST" duration-ms="222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.SalesInvoiceTest@a307a8c]" started-at="2022-05-19T20:29:12 IST" name="init" finished-at="2022-05-19T20:29:23 IST" duration-ms="11155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="addNewSaleInvoiceTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purnadata.testcases.SalesInvoiceTest@a307a8c]" started-at="2022-05-19T20:29:23 IST" name="addNewSaleInvoiceTest" data-provider="getSalesInvoicedata" finished-at="2022-05-19T20:29:45 IST" duration-ms="21772" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcd12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[22/03/2021]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tanvisha]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10000.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[120.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[90.0]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate element with text: Tanvisha
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'DESKTOP-DQN0RRE', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Tanvisha
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'DESKTOP-DQN0RRE', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:141)
+at com.purnadata.libraries.Utilities.selectDropDownByVisibleText(Utilities.java:249)
+at com.purnadata.testcases.SalesInvoiceTest.addNewSaleInvoiceTest(SalesInvoiceTest.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewSaleInvoiceTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.purnadata.testcases.SalesInvoiceTest@a307a8c]" started-at="2022-05-19T20:29:45 IST" name="close" finished-at="2022-05-19T20:29:45 IST" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.purnadata.testcases.SalesInvoiceTest -->
+      <class name="com.purnadata.testcases.PaymentSummaryTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.PaymentSummaryTest@6e01f9b0]" started-at="2022-05-19T20:29:45 IST" name="init" finished-at="2022-05-19T20:29:56 IST" duration-ms="11036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="verifyPurchaseInvoiceExportTest()[pri:0, instance:com.purnadata.testcases.PaymentSummaryTest@6e01f9b0]" started-at="2022-05-19T20:29:56 IST" name="verifyPurchaseInvoiceExportTest" finished-at="2022-05-19T20:29:59 IST" duration-ms="2606" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Downloading is successfull] but found [This page isn’t working]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Downloading is successfull] but found [This page isn’t working]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.purnadata.testcases.PaymentSummaryTest.verifyPurchaseInvoiceExportTest(PaymentSummaryTest.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPurchaseInvoiceExportTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.purnadata.testcases.PaymentSummaryTest@6e01f9b0]" started-at="2022-05-19T20:29:59 IST" name="closeBrowser" finished-at="2022-05-19T20:29:59 IST" duration-ms="605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.purnadata.testcases.PaymentSummaryTest -->
+      <class name="com.purnadata.testcases.InventoryTest">
+        <test-method is-config="true" signature="inti()[pri:0, instance:com.purnadata.testcases.InventoryTest@1bab8268]" started-at="2022-05-19T20:28:40 IST" name="inti" finished-at="2022-05-19T20:28:51 IST" duration-ms="10813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inti -->
+        <test-method signature="addInventorySuccessTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.purnadata.testcases.InventoryTest@1bab8268]" started-at="2022-05-19T20:28:51 IST" name="addInventorySuccessTest" data-provider="getInventoryData" finished-at="2022-05-19T20:28:55 IST" duration-ms="4296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1003.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[grocery12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Grossery]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2500.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5000.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addInventorySuccessTest -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:com.purnadata.testcases.InventoryTest@1bab8268]" started-at="2022-05-19T20:28:55 IST" name="browserclose" finished-at="2022-05-19T20:28:56 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- com.purnadata.testcases.InventoryTest -->
+      <class name="com.purnadata.testcases.LoginTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:27:44 IST" name="init" finished-at="2022-05-19T20:27:49 IST" duration-ms="5256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="checkLogoDescription()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:27:49 IST" name="checkLogoDescription" finished-at="2022-05-19T20:27:49 IST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLogoDescription -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:27:49 IST" name="close" finished-at="2022-05-19T20:27:50 IST" duration-ms="505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:27:50 IST" name="init" finished-at="2022-05-19T20:27:55 IST" duration-ms="4894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="loginFailureTest()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:27:55 IST" name="loginFailureTest" finished-at="2022-05-19T20:28:15 IST" duration-ms="20515" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h4[text()='Sale Invoice Details']"}
-  (Session info: chrome=100.0.4896.88)
+  (Session info: chrome=101.0.4951.67)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
-System info: host: 'DESKTOP-DQN0RRE', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'DESKTOP-DQN0RRE', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8cb3985d77688e8318500db8d4e7eb08
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50850}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3dbab40b5369cb489270c10e0877abc7
 *** Element info: {Using=xpath, value=//h4[text()='Sale Invoice Details']}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h4[text()='Sale Invoice Details']"}
-  (Session info: chrome=100.0.4896.88)
+  (Session info: chrome=101.0.4951.67)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
-System info: host: 'DESKTOP-DQN0RRE', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'DESKTOP-DQN0RRE', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65205}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8cb3985d77688e8318500db8d4e7eb08
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50850}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3dbab40b5369cb489270c10e0877abc7
 *** Element info: {Using=xpath, value=//h4[text()='Sale Invoice Details']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
@@ -51,7 +305,7 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.getText(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy13.getText(Unknown Source)
 at com.purnadata.testcases.LoginTest.loginFailureTest(LoginTest.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
@@ -87,11 +341,93 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginFailureTest -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.purnadata.testcases.LoginTest@8519cb4]" started-at="2022-04-14T21:19:27 IST" name="close" finished-at="2022-04-14T21:19:27 IST" duration-ms="217" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:28:15 IST" name="close" finished-at="2022-05-19T20:28:15 IST" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:28:15 IST" name="init" finished-at="2022-05-19T20:28:20 IST" duration-ms="4445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="loginSuccessTest()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:28:20 IST" name="loginSuccessTest" finished-at="2022-05-19T20:28:27 IST" duration-ms="6676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSuccessTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:28:27 IST" name="close" finished-at="2022-05-19T20:28:27 IST" duration-ms="326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:28:27 IST" name="init" finished-at="2022-05-19T20:28:32 IST" duration-ms="4817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="titleCheck()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:28:32 IST" name="titleCheck" finished-at="2022-05-19T20:28:39 IST" duration-ms="6868" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Sales Dashboard] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Sales Dashboard] but found []
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.purnadata.testcases.LoginTest.titleCheck(LoginTest.java:51)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleCheck -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.purnadata.testcases.LoginTest@1cd629b3]" started-at="2022-05-19T20:28:39 IST" name="close" finished-at="2022-05-19T20:28:39 IST" duration-ms="255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- com.purnadata.testcases.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.purnadata.testcases.PurchaseTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.purnadata.testcases.PurchaseTest@658c5a19]" started-at="2022-05-19T20:29:59 IST" name="init" finished-at="2022-05-19T20:30:12 IST" duration-ms="12297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="editPurchaseOrder()[pri:0, instance:com.purnadata.testcases.PurchaseTest@658c5a19]" started-at="2022-05-19T20:30:12 IST" name="editPurchaseOrder" finished-at="2022-05-19T20:30:14 IST" duration-ms="2433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPurchaseOrder -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.purnadata.testcases.PurchaseTest@658c5a19]" started-at="2022-05-19T20:30:14 IST" name="closeBrowser" finished-at="2022-05-19T20:30:15 IST" duration-ms="399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.purnadata.testcases.PurchaseTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
