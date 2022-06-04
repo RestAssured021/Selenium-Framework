@@ -39,7 +39,7 @@ public class SalesInvoiceTest extends BaseClass {
 		return data;
 	}
 
-	@Test(enabled=false, dataProvider = "getSalesInvoicedata")
+	@Test(dataProvider = "getSalesInvoicedata")
 	public void addNewSaleInvoiceTest(String powo, String date, String customer, String amount, String transCharge,
 			String packChanrges) {
 		utils.clickElement(driver, dashboardPage.btn_newSaleInvoice);
