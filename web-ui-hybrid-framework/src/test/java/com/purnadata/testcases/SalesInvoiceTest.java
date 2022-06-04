@@ -11,6 +11,7 @@ import com.purnadata.libraries.BaseClass;
 import com.purnadata.libraries.ExcelUtils;
 import com.purnadata.libraries.Utilities;
 import com.purnadata.pages.DashboardPage;
+import com.purnadata.pages.EditSalesInvoicePage;
 import com.purnadata.pages.LoginPage;
 import com.purnadata.pages.SaleInvoicePage;
 
@@ -19,6 +20,7 @@ public class SalesInvoiceTest extends BaseClass {
 	DashboardPage dashboardPage;
 	SaleInvoicePage saleInvoicePage;
 	Utilities utils;
+	EditSalesInvoicePage editSalesInvoicePage;
 	
 	@BeforeMethod
 	public void init() {
@@ -26,6 +28,7 @@ public class SalesInvoiceTest extends BaseClass {
 		loginPage = new LoginPage(driver);
 		dashboardPage = new DashboardPage(driver);
 		saleInvoicePage = new SaleInvoicePage(driver);
+		editSalesInvoicePage = new EditSalesInvoicePage(driver);
 		utils = new Utilities();
 		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password"));
 	}
@@ -58,6 +61,28 @@ public class SalesInvoiceTest extends BaseClass {
 		Assert.assertEquals(driver.findElement(By.xpath("//td[text()='"+customer+"']")).getText(), customer);
 	}
 	
+	@DataProvider
+	public Object[][] getEditSalesInvoicedata() {
+		Object[][] data = ExcelUtils.getTestData("EditSaleInvoice");
+		return data;
+	}
+	
+	@Test(dataProvider = "getEditSalesInvoicedata")
+	public void editSalesInvoiceTest(String billAddress, String contPerson) {
+		utils.clickElement(driver, dashboardPage.link_sales);
+		utils.clickElement(driver, dashboardPage.link_salesInvoice);
+		utils.clickElement(driver, dashboardPage.link_edit);
+		utils.syncElement(driver, editSalesInvoicePage.txtBox_billAddress, "To_Visible");
+		editSalesInvoicePage.txtBox_billAddress.clear();
+		editSalesInvoicePage.txtBox_billAddress.sendKeys(billAddress);
+		editSalesInvoicePage.txtBox_contPerson.clear();
+		editSalesInvoicePage.txtBox_contPerson.sendKeys(contPerson);	
+		utils.clickElement(driver, editSalesInvoicePage.btn_update);
+	
+	    utils.acceptAlert(driver);
+	    
+		Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Rajesh']")).getText(), "Rajesh");
+	}
 
 	@AfterMethod
 	public void close() {

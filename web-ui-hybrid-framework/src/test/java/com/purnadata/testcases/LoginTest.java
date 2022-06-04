@@ -41,7 +41,7 @@ public class LoginTest extends BaseClass {
 	@Test
 	public void loginFailureTest() {
 		loginPage.loginToPurna(prop.getProperty("username"), prop.getProperty("password2"));
-		Assert.assertEquals(dashboardPage.text_salesInvoiceDetails.getText(), "Sale Invoice Details");
+		Assert.assertEquals(driver.getCurrentUrl(), "https://www.purnadata.in/PurnaDemo/index.php");
 	
 	}
 
