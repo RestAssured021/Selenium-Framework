@@ -40,4 +40,13 @@ public class DashboardPage {
 	@FindBy(xpath="//a[@href='view_supplier_balance.php']")
 	public WebElement link_paymentSummary;
 	
+	@FindBy(xpath = "//span[text()=' Sales ']")
+	public WebElement link_sales;
+	
+	@FindBy(xpath = "//a[@href='sale_dashboard.php']")
+	public WebElement link_salesInvoice;
+	
+	@FindBy(xpath = "//a[text()='Edit']")
+	public WebElement link_edit;
+	
 }
