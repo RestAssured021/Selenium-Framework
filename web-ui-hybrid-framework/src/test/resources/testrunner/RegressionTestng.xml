@@ -9,13 +9,14 @@
 	
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="com.purnadata.testcases.LoginTest" />
-			<class name="com.purnadata.testcases.InventoryTest" />
-			<class name="com.purnadata.testcases.SalesInvoiceTest" />
+			<!-- <class name="com.purnadata.testcases.LoginTest" />
+			<class name="com.purnadata.testcases.InventoryTest" /> -->
+			<!-- <class name="com.purnadata.testcases.SalesInvoiceTest" />
 			<class name="com.purnadata.testcases.SupplierTest" />
-			<class name="com.purnadata.testcases.EmployeeTest" />
+			<class name="com.purnadata.testcases.EmployeeTest" /> -->
 			<class name="com.purnadata.testcases.PaymentSummaryTest" />
 			<class name="com.purnadata.testcases.PurchaseTest" />
+			<class name="com.purnadata.testcases.CustomerTest" />
 			
 		</classes>
 	</test> <!-- Test -->
