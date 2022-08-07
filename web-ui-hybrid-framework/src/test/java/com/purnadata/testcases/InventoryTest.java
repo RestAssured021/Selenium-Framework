@@ -51,7 +51,7 @@ public class InventoryTest extends BaseClass{
 		purchaseItemPage.txtBox_itemcode.sendKeys(itemCode);
 		purchaseItemPage.txtBox_itemname.sendKeys(itemName);
 			
-		utils.doDropDownSelectByVisibleText(purchaseItemPage.dropdown_units, "KG");
+		utils.handleDropdown(purchaseItemPage.dropdown_units, "KG");
 		
 		purchaseItemPage.txtBox_rate.sendKeys(rate);
 		purchaseItemPage.txtBox_quantity.sendKeys(quantity);
