@@ -22,11 +22,11 @@ public class ExcelUtils extends BaseClass {
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 20;
 	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\PurnaTestData.xlsx";
-	static Workbook book;
+	static Workbook book;			
 	static Sheet sheet;
 	static JavascriptExecutor js;
 	
-	private static Logger logger = LoggerFactory.getLogger(BaseClass.class);
+	private static Logger logger = LoggerFactory.getLogger(ExcelUtils.class);
 
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
@@ -46,7 +46,6 @@ public class ExcelUtils extends BaseClass {
 		sheet = book.getSheet(sheetName);
 		
 		Object[][] data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
-		
 		
 		for (int i = 0; i < sheet.getLastRowNum(); i++) {
 			for (int k = 0; k < sheet.getRow(0).getLastCellNum(); k++) 

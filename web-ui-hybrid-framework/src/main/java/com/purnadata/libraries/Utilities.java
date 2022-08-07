@@ -182,7 +182,7 @@ public class Utilities {
 	}
 
 	// *******************Drop down utils *************** public void
-	public void doDropDownSelectByVisibleText(WebElement element, String value) { 
+	public void handleDropdown(WebElement element, String value) { 
 		Select select = new Select(element); 
 		select.selectByVisibleText(value); 
 	}
@@ -192,7 +192,7 @@ public class Utilities {
 		select.selectByValue(value);
 	}
 
-	public void doDropDownSelectByIndex(WebElement element, int index) {
+	public void handleDropdown(WebElement element, int index) {
 		Select select = new Select(element);
 		select.selectByIndex(index);
 	}
