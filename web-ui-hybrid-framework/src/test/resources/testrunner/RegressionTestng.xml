@@ -17,6 +17,7 @@
 			<class name="com.purnadata.testcases.PaymentSummaryTest" />
 			<class name="com.purnadata.testcases.PurchaseTest" />
 			<class name="com.purnadata.testcases.CustomerTest" />
+			<class name="com.purnadata.testcases.DebitNoteTest" />
 			
 		</classes>
 	</test> <!-- Test -->
