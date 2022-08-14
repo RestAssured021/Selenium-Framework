@@ -44,5 +44,4 @@ public class DebitNoteTest extends BaseClass{
 	public void closeBrowser() {
 		driver.close();
 	}
-
 }
